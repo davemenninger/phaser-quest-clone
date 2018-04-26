@@ -13,6 +13,7 @@ Game.preload = function(){
 };
 
 Game.create = function(){
+    Game.playerMap = {};
     var map = game.add.tilemap('map');
     map.addTilesetImage('tilesheet','tileset');
     var layer;
@@ -21,6 +22,11 @@ Game.create = function(){
         layer = map.createLayer(i);
     }
     layer.inputEnable = true;
+    Client.askNewPlayer();
+};
+
+Game.addNewPlayer = function(id,x,y){
+    Game.playerMap[id] = game.add.sprite(x,y,'sprite');
 };
 
 var game = new Phaser.Game(24*32,17*32,Phaser.AUTO,document.getElementById('game'));
