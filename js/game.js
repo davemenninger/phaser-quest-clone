@@ -7,15 +7,15 @@ Game.init = function(){
 };
 
 Game.preload = function(){
-    game.load.tilemap('map','assets/map/example_map.json',null,Phaser.Tilemap.TILED_JSON );
-    game.load.spritesheet('tileset','assets/map/tilesheet.png',32,32);
+    game.load.tilemap('map','assets/map/derp.json',null,Phaser.Tilemap.TILED_JSON );
+    game.load.spritesheet('tileset','assets/map/mapPack_tilesheet.png',32,32);
     game.load.image('sprite','assets/sprites/sprite.png');
 };
 
 Game.create = function(){
     Game.playerMap = {};
     var map = game.add.tilemap('map');
-    map.addTilesetImage('tilesheet','tileset');
+    map.addTilesetImage('mapPack_tilesheet','tileset');
     var layer;
     for ( var i = 0; i < map.layers.length ; i++ )
     {
