@@ -20,6 +20,6 @@
   "dependencies": {
     "express": "^4.16.3",
     "phaser": "^2.6.2",
-    "socket.io": "^2.1.0"
+    "socket.io": "^3.0.0"
   }
 }
